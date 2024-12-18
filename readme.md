@@ -100,7 +100,9 @@ http://127.0.0.1:5000/
    - The most relevant book titles, authors, and ratings will be displayed dynamically.  
 
 ---
+## **Output Screen** 
 
+Home![image](https://github.com/user-attachments/assets/5e30e1a0-5e92-4bdd-8f93-dbf0fb04803a)
 
 
 ## **Future Enhancements**  
@@ -134,7 +136,7 @@ Contributions are welcome! Follow these steps to contribute:
 ## **Contact**  
 For any questions or suggestions, feel free to reach out:  
 - **Name**: Talha Satti  
-- **Email**: your-email@example.com  
+- **Email**: basittalha181@gmail.com  
 - **LinkedIn**: [Talha Satti](https://www.linkedin.com/in/talha-satti786/)  
 
 ---
