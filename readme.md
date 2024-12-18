@@ -101,15 +101,7 @@ http://127.0.0.1:5000/
 
 ---
 
-## **Screenshots**  
 
-### **Home Page**  
-![Home Page](https://via.placeholder.com/800x400?text=Home+Page+Screenshot)  
-
-### **Search Results**  
-![Results Page](https://via.placeholder.com/800x400?text=Search+Results+Screenshot)  
-
----
 
 ## **Future Enhancements**  
 The following features can be added to improve the system:  
