@@ -135,7 +135,7 @@ Contributions are welcome! Follow these steps to contribute:
 
 ## **Contact**  
 For any questions or suggestions, feel free to reach out:  
-- **Name**: Talha Satti  
+- **Name**: Talha Satti and Muhammad Huzaifa 
 - **Email**: basittalha181@gmail.com  
 - **LinkedIn**: [Talha Satti](https://www.linkedin.com/in/talha-satti786/)  
 
