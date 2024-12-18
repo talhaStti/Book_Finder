@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Finder</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        input, select, button { padding: 10px; margin: 5px; }
+        .results { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Book Vault</h1>
+    <label for="query">Enter your Query:</label>
+    <input type="text" id="query" placeholder="e.g., magic school" size="40">
+    <label for="method">Search Method:</label>
+    <select id="method">
+        <option value="bm25">BM25</option>
+        <option value="sbert">SBERT</option>
+    </select>
+    <button onclick="searchBooks()">Search</button>
+
+    <div class="results" id="results"></div>
+
+    <script>
+        async function searchBooks() {
+            const query = document.getElementById("query").value;
+            const method = document.getElementById("method").value;
+            const resultsDiv = document.getElementById("results");
+
+            resultsDiv.innerHTML = "Searching...";
+
+            const response = await fetch("/search", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ query, method })
+            });
+
+            const data = await response.json();
+
+            if (data.error) {
+                resultsDiv.innerHTML = "<p>" + data.error + "</p>";
+            } else {
+                let html = "<h3>Results:</h3><ul>";
+                data.forEach(book => {
+                    html += `<li><strong>${book.title}</strong> by ${book.authors} (Rating: ${book.average_rating})</li>`;
+                });
+                html += "</ul>";
+                resultsDiv.innerHTML = html;
+            }
+        }
+    </script>
+</body>
+</html>
